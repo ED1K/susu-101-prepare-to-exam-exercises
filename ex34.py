@@ -5,12 +5,6 @@ N = int(input("Введите количество элементов масси
 a = [random.randint(0, 100) for i in range(0, N)]
 print(a)
 
-if (len(a) % 2 == 1):
-    end = N
-else:
-    end = N-1
-
-
-for i in range(end-1 // 2):
-    a[i], a[i + end-1 // 2] = a[i + end-1 // 2], a[i]
+for i in range(len(a) // 2):
+    a[i], a[i + len(a) // 2] = a[i + len(a) // 2], a[i]
 print(a)
